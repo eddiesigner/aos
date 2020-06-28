@@ -168,7 +168,7 @@ const init = function init(settings) {
    */
   window.addEventListener('scroll', throttle(() => {
     handleScroll($aosElements, options.once);
-  }, options.throttleDelay));
+  }, options.throttleDelay), { passive: true });
 
   /**
    * Observe [aos] elements
